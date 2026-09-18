@@ -1,0 +1,231 @@
+/*CSS reset
+CSS Statement = 
+selector {
+  property: value;
+}
+*/
+:root {
+  /* Primary: Navy/charcoal - durability, professionalism, workwear heritage */
+  --color-primary: #0a2540;
+  --color-primary-dark: #071a2e;
+  /* Accent: Amber/safety yellow-orange - hi-vis and electrical safety cues, used for CTAs */
+  --color-accent: #ffb300;
+  /* Site is a dark navy theme (not light neutrals): these two are the two navy
+     shades used for backgrounds, with off-white text over them for contrast */
+  --color-neutral-light: #0a2540;
+  --color-neutral-white: #071a2e;
+  --color-text-white: #ede5e5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%; /* used as the base for all relative sizing below */
+}
+
+body {
+  background-color: var(--color-neutral-white);
+  color: var(--color-text-white);
+  font-family: 'Arial', Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+/* Simple page layout structure: header, main content, footer stacked with
+   consistent spacing using flexbox */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 16px;
+  flex: 1;
+}
+
+header {
+  background-color: var(--color-primary-dark);
+  padding: 16px;
+}
+
+footer {
+  background-color: var(--color-primary-dark);
+  padding: 16px;
+  text-align: center;
+}
+
+h1 {
+    padding: 20px;
+    font-size: 40px;
+    font-family: 'Arial', Helvetica, sans-serif;
+    color: var(--color-text-white);
+}
+
+h2 {
+    padding: 10px;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans', 'Arial', Helvetica, sans-serif;
+    color: var(--color-text-white);
+}
+
+p {
+    font-size: 16px;
+    padding: 4.8px 0;
+}
+
+nav ul {
+    background-color: var(--color-primary);
+    display: flex;
+    list-style-type: none;
+    padding: 10px;
+}
+
+nav ul li a{
+    padding: 10px;
+    color: var(--color-text-white);
+    text-decoration: none;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: var(--color-accent);
+    color: var(--color-primary-dark);
+    border-radius: 35px;
+}
+/* Logo stays small */
+.logo {
+  width: 200px;
+  height: 200px;
+}
+
+/* Hero image - you control this one */
+.hero-img {
+  width: 100%;
+  max-width: 1356px;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .hero-img {
+    height: 250px;
+  }
+}
+
+.responsive-image {
+    max-width:800px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.product {
+  background:#0a2540;
+  color: black;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.product-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.product-images {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.product-images img {
+  width: 220px;
+  height: 160px;
+  object-fit: cover; /* This removes the black bars */
+  border-radius: 8px;
+  border: none;
+}
+
+.product button {
+  background: #ff9900;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 4.8px;
+}
+
+.container > div {
+    background-color: var(--color-primary);
+    margin: 4.8px;
+    padding: 20px;
+    color: var(--color-text-white);
+    font-size: 13.6px;
+    border-radius: 20px;
+}
+
+/* ===== 3.1 Breakpoints ===== */
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: auto auto;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 14.4px;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+    .container {
+        grid-template-columns: auto;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li a {
+        display: block;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 17.6px;
+    }
+    p {
+        font-size: 13.6px;
+    }
+}
