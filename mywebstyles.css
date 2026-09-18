@@ -8,10 +8,9 @@ selector {
   /* Primary: Navy/charcoal - durability, professionalism, workwear heritage */
   --color-primary: #0a2540;
   --color-primary-dark: #071a2e;
-  /* Accent: Amber/safety yellow-orange - hi-vis and electrical safety cues, used for CTAs */
+  /* Accent: Amber/safety yellow-orange */
   --color-accent: #ffb300;
-  /* Site is a dark navy theme (not light neutrals): these two are the two navy
-     shades used for backgrounds, with off-white text over them for contrast */
+  /* Site is a dark navy theme */
   --color-neutral-light: #0a2540;
   --color-neutral-white: #071a2e;
   --color-text-white: #ede5e5;
@@ -105,7 +104,7 @@ nav ul li a:focus {
   height: 200px;
 }
 
-/* Hero image - you control this one */
+/* Hero image */
 .hero-img {
   width: 100%;
   max-width: 1356px;
@@ -187,7 +186,7 @@ nav ul li a:focus {
     border-radius: 20px;
 }
 
-/* ===== 3.1 Breakpoints ===== */
+/* 3.1 Breakpoints */
 
 /* Tablet */
 @media screen and (max-width: 768px) {
